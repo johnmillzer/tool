@@ -7,7 +7,7 @@
 #!system_version = 
 #!loon_version = 3.2.1(745)
 #!homepage = 
-#!icon = https://raw.githubusercontent.com/johnmillzer/Icon/elm.png
+#!icon = https://github.com/johnmillzer/Icon/blob/e93b90ffe860fa105305d4c8daf73ec42206cb4d/elm.png
 #!date = 2024-09-15 20:19:15
 
 [Rule]
