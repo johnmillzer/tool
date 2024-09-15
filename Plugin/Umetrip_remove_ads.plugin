@@ -1,6 +1,6 @@
 #!name = 航旅纵横去广告
 #!desc = 过滤航旅纵横广告
-#!openUrl = https://apps.apple.com/app/id480161784
+#!openUrl = 
 #!author = 佚名,kelidalao,linus zhang
 #!tag = 去广告
 #!system = 
@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(745)
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Umetrip.png
-#!date = 2023-10-27 11:24:48
+#!date = 2024-09-15 20:40:34
 
 [Rule]
 URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native, REJECT
