@@ -1,1 +1,22 @@
+#!name = 美团去广告
+#!desc = 美团 & 美团外卖去广告
+#!openUrl = 
+#!author = fmz200
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(745)
+#!homepage = 
+#!icon = https://raw.githubusercontent.com/johnmillzer/Icon/main/meituan.png
+#!date = 2024-09-16 12:30:41
 
+[Rule]
+
+
+[Rewrite]
+
+
+[Script]
+
+[MitM]
+hostname = 
