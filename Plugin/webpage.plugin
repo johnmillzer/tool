@@ -21,7 +21,7 @@
 ## 百度防跳转
 http-request ^https:\/\/boxer\.baidu\.com\/scheme\?scheme script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/baidu/baiduNoRedirect.js, tag = bd_boxer
 ## 百度首页
-##  http-response ^https:\/\/(?:www|m)\.baidu\.com(\/|\/\?(tn=&)?from=\d+\w)?$ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/webpage/baidu-index.js, requires-body = true, tag = bd_hello
+// http-response ^https:\/\/(?:www|m)\.baidu\.com(\/|\/\?(tn=&)?from=\d+\w)?$ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/webpage/baidu-index.js, requires-body = true, tag = bd_hello
 ## 百度知道
 http-response ^https:\/\/zhidao\.baidu\.com\/(?:question|index|\?fr|\?word) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/webpage/baidu-zhidao.js, requires-body = true, tag = bd_zhidao
 
