@@ -173,9 +173,9 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
   if (obj?.data?.cardList?.length > 0) {
     obj.data.cardList = obj.data.cardList.filter((i) => i?.dataKey === "MyOrderCard");
   }
-  if (obj?.data?.tipData) {
-    delete obj.data.tipData;
-  }
+  //if (obj?.data?.tipData) {
+    //delete obj.data.tipData;
+  //}
   // 足迹
   // if (obj.data.footPrintV2) {
   //   delete obj.data.footPrintV2;
