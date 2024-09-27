@@ -181,13 +181,13 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
   //   delete obj.data.footPrintV2;
   // }
   // 成就勋章 lv1见习达人
-  if (obj?.data?.memberInfo) {
-    delete obj.data.memberInfo;
-  }
-  if (obj?.data?.topMixedCard) {
+  //if (obj?.data?.memberInfo) {
+    //delete obj.data.memberInfo;
+  //}
+  //if (obj?.data?.topMixedCard) {
     // 顶部足迹、贡献卡片
-    delete obj.data.topMixedCard;
-  }
+   // delete obj.data.topMixedCard;
+  //}
 } else if (url.includes("/shield/frogserver/aocs/updatable/")) {
   // 整体图层
   const items = [
