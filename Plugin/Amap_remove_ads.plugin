@@ -1,7 +1,6 @@
 #!name = 高德地图
-#!desc = 缺德地图有治了。(初次使用此插件，建议卸载高德app，重新安装。)
+#!desc = 缺德地图有治了。
 #!author = RuCu6[https://github.com/RuCu6], kokoryh[https://github.com/kokoryh]
-#!icon = https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/amap.png
 #!date = 2024-09-12 10:40
 
 [Rule]
