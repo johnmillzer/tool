@@ -177,9 +177,9 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     delete obj.data.tipData;
   }
   // 足迹
-  // if (obj.data.footPrintV2) {
-  //   delete obj.data.footPrintV2;
-  // }
+   if (obj.data.footPrintV2) {
+   delete obj.data.footPrintV2;
+  }
   // 成就勋章 lv1见习达人
   if (obj?.data?.memberInfo) {
     delete obj.data.memberInfo;
