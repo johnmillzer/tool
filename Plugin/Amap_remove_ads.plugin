@@ -71,7 +71,7 @@ http-response ^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/new_hotword require
 # 附近页
 # http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除附近页推广
 
-# 开屏广告
+# 开屏广告 //很可能是这一条导致不显示我的里面的足迹数据
 # http-response ^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除开屏广告
 
 # 打车页 - 红点角标、弹窗、天气图标、推广卡片
