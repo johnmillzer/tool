@@ -15,7 +15,7 @@ DOMAIN-SUFFIX, cdn-evone.oss-cn-beijing.aliyuncs.com, REJECT
 
 [Rewrite]
 # 去开屏广告
-# ^http:\/\/cdn-evone\.oss-cn-beijing\.aliyuncs\.com\/cms_img\/ reject-dict
+^http:\/\/cdn-evone\.oss-cn-beijing\.aliyuncs\.com\/cms_img\/ reject-dict
 
 
 [Script]
