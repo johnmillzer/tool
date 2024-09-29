@@ -1,1 +1,43 @@
+#!name = 航旅纵横去广告
+#!desc = 过滤航旅纵横广告
+#!openUrl = 
+#!author = 佚名,kelidalao,linus zhang
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(745)
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Umetrip.png
+#!date = 2024-09-15 20:40:34
 
+[Rule]
+URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native, REJECT
+
+[Rewrite]
+# 开屏广告
+^http?:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+^https?:\/\/discardrp\.umetrip\.com\/gateway\/api\/umetrip\/native  reject-200
+^https?:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+^http:\/\/oss\.umetrip\.com\/fs\/advert\/  reject
+^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject-200
+
+# 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅
+# ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(main-page-assets|main-page-location|ridewalk-end-fc) reject-dict
+# ^https:\/\/m5\.amap\.com\/ws\/(mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword) reject-dict
+# ^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? reject-dict
+# ^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? reject-dict
+# ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? reject-dict
+
+
+[Script]
+http-response ^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Umetrip/Umetrip_remove_ads.js, tag = 移除首页广告
+
+# 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅
+# http-response ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(card-service-plan-home|main-page) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除首页推广
+# http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除首页推广
+
+
+[MitM]
+hostname = 114.115.217.129, home.umetrip.com, home.umetrip.com,discardrp.umetrip.com,startup.umetrip.com,
