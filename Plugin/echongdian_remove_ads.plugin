@@ -12,10 +12,12 @@
 
 [Rule]
 DOMAIN-SUFFIX, cdn-evone.oss-cn-beijing.aliyuncs.com, REJECT
+DOMAIN-SUFFIX, cdn-evone-oss.echargenet.com, REJECT
 
 [Rewrite]
 # 去开屏广告
 ^http:\/\/cdn-evone\.oss-cn-beijing\.aliyuncs\.com\/cms_img\/ reject-dict
+^https:\/\/cdn-evone-oss\.echargenet\.com\/yingxiao\/ reject-dict
 
 
 [Script]
@@ -23,4 +25,4 @@ DOMAIN-SUFFIX, cdn-evone.oss-cn-beijing.aliyuncs.com, REJECT
 
 
 [MitM]
-hostname = cdn-evone.oss-cn-beijing.aliyuncs.com, 
+hostname = cdn-evone.oss-cn-beijing.aliyuncs.com, cdn-evone-oss.echargenet.com
