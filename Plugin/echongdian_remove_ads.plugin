@@ -1,1 +1,26 @@
+#!name = e充电去广告
+#!desc = e充电去广告
+#!openUrl = 
+#!author = jm
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(745)
+#!homepage = 
+#!icon = 
+#!date = 2024-09-26 10:20:152024-09-29 21:53:21
 
+[Rule]
+DOMAIN-SUFFIX, cdn-evone.oss-cn-beijing.aliyuncs.com, REJECT
+
+[Rewrite]
+# 去开屏广告
+# ^http:\/\/cdn-evone\.oss-cn-beijing\.aliyuncs\.com\/cms_img\/ reject-dict
+
+
+[Script]
+
+
+
+[MitM]
+hostname = cdn-evone.oss-cn-beijing.aliyuncs.com, 
