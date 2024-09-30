@@ -1,12 +1,12 @@
 #!name = 航旅纵横去广告
 #!desc = 过滤航旅纵横广告
 #!openUrl = 
-#!author = 佚名,kelidalao,linus zhang
+#!author = Linus zhang
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.1(745)
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
+#!homepage = 
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Umetrip.png
 #!date = 2024-09-15 20:40:34
 
@@ -15,16 +15,24 @@ URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/
 
 [Rewrite]
 # 开屏广告
-^http?:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native reject
-^https?:\/\/discardrp\.umetrip\.com\/gateway\/api\/umetrip\/native  reject-200
-^https?:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native reject
 ^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject
-^http:\/\/oss\.umetrip\.com\/fs\/advert\/  reject
-^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject
-^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject-200
+#^https?:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+^https?:\/\/bkclient\.umetrip\.com\.cn\/gateway\/api\/umetrip\/native reject
+^https?:\/\/oss\.umetrip\.com\/fs\/advert\/polite reject-dict
+
+#^http?:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+#^https?:\/\/discardrp\.umetrip\.com\/gateway\/api\/umetrip\/native  reject-200
+#^https?:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+#^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+#^http:\/\/oss\.umetrip\.com\/fs\/advert\/  reject
+#^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+#^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject-200
+
 
 [Script]
-http-response ^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Umetrip/Umetrip_remove_ads.js, tag = 移除首页广告
+# 首页 - 移除广告：今日推荐、推荐、全球购。。。
+# http-response ^https?:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native script-path = https://raw.githubusercontent.com/linuszlx/JS/refs/heads/main/Hanglvzongheng/Um.JS, tag = 移除首页广告
+
 
 [MitM]
-hostname = 114.115.217.129, home.umetrip.com, home.umetrip.com,discardrp.umetrip.com,startup.umetrip.com,
+hostname = umerp.umetrip.com, umerp.umetrip.com.cn, home.umetrip.com, bkclient.umetrip.com.cn, discardrp.umetrip.com, startup.umetrip.com, oss.umetrip.com, 
