@@ -7,7 +7,8 @@ if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
 if (url.includes("ngstatic/appScreenAds/requestAds")) {
-  if (obj && obj.data && obj.data.duration) {
+  if (obj && obj.data && obj.data.showTime && obj.data.duration) {
+    obj.data.showTime = "23:59:58-23:59:59";
     obj.data.duration = "0";
   }
 }
