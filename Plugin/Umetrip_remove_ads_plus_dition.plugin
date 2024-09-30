@@ -15,22 +15,26 @@ URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/
 
 [Rewrite]
 # 开屏广告
-^http?:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native reject
-^https?:\/\/discardrp\.umetrip\.com\/gateway\/api\/umetrip\/native  reject-200
-^https?:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native reject
 ^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject
-^http:\/\/oss\.umetrip\.com\/fs\/advert\/  reject
-^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject
-^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject-200
+#^https?:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+^https?:\/\/bkclient\.umetrip\.com\.cn\/gateway\/api\/umetrip\/native reject
+^https?:\/\/oss\.umetrip\.com\/fs\/advert\/polite reject-dict
 
-# 首页 - 移除广告：今日推荐、推荐、全球购。。。
-# ^https:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native$ response-body-replace-regex adDesc null 
+#^http?:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+#^https?:\/\/discardrp\.umetrip\.com\/gateway\/api\/umetrip\/native  reject-200
+#^https?:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+#^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+#^http:\/\/oss\.umetrip\.com\/fs\/advert\/  reject
+#^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+#^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject-200
 
 
 [Script]
+# 首页 - 移除广告：今日推荐、推荐、全球购。。。
 http-response ^https?:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native script-path = https://raw.githubusercontent.com/linuszlx/JS/refs/heads/main/Hanglvzongheng/Um.JS, tag = 移除首页广告
 
 
 [MitM]
-hostname = 114.115.217.129, home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com, umerp.umetrip.com, 
+hostname = umerp.umetrip.com, umerp.umetrip.com.cn, home.umetrip.com, bkclient.umetrip.com.cn, discardrp.umetrip.com, startup.umetrip.com, oss.umetrip.com, 
+
 
