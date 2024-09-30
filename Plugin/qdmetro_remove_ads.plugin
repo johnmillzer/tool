@@ -10,10 +10,6 @@
 #!icon = 
 #!date = 2024-09-30 18:11:34
 
-[Rewrite]
-# 开屏广告去除方法一
-# ^https:\/\/api\.qd-metro\.com\/ngstatic\/appScreenAds\/requestAds reject-dict
-
 [Script]
 # 开屏广告去除方法二
 http-response ^https:\/\/api\.qd-metro\.com\/ngstatic\/appScreenAds\/requestAds script-path = https://raw.githubusercontent.com/johnmillzer/tool/refs/heads/main/Scripts/qdmetro_remove_ads.js, requires-body = true, tag = 移除开屏广告
