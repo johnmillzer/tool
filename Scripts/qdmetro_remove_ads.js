@@ -15,6 +15,7 @@ if (url.includes("ngstatic/appScreenAds/requestAds")) {
 if (url.includes("/ngstatic/static/fourthIndex")) {
   if (obj && obj.data && obj.data.ads) {
     obj.data.ads = {};
+    obj.data.topAds = {};
   }
 }
 
