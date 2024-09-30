@@ -17,7 +17,7 @@
 
 [Rewrite]
 # 去开屏广告
-# ^http:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/ reject-dict
+^http:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/ reject-dict
 
 
 # ^https:\/\/cdn-evone-oss\.echargenet\.com\/yingxiao\/ reject-dict
