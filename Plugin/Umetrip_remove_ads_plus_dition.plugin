@@ -24,7 +24,7 @@ URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/
 ^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject-200
 
 # 首页 - 移除广告：今日推荐、推荐、全球购。。。
-^https:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native$ requires-body=1,script-response-body response-body-replace-regex "adDesc" "null"
+^https:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native$ response-body-replace-regex adDesc null 
 
 
 [Script]
