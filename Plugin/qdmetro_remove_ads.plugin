@@ -15,11 +15,11 @@
 
 [Rewrite]
 # 开屏广告去除方法一
-^https:\/\/api\.qd-metro\.com\/ngstatic\/appScreenAds\/requestAds reject-dict
+# ^https:\/\/api\.qd-metro\.com\/ngstatic\/appScreenAds\/requestAds reject-dict
 
 [Script]
 # 开屏广告去除方法二
-# ^https:\/\/api\.qd-metro\.com\/ngstatic\/appScreenAds\/requestAds script-path = https://raw.githubusercontent.com/johnmillzer/tool/refs/heads/main/Scripts/qdmetro_remove_ads.js, requires-body = true, tag = 移除开屏广告
+^https:\/\/api\.qd-metro\.com\/ngstatic\/appScreenAds\/requestAds script-path = https://raw.githubusercontent.com/johnmillzer/tool/refs/heads/main/Scripts/qdmetro_remove_ads.js, requires-body = true, tag = 移除开屏广告
 
 [MitM]
 hostname = api.qd-metro.com
