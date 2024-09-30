@@ -14,5 +14,12 @@
 # 开屏广告去除方法二
 http-response ^https:\/\/api\.qd-metro\.com\/ngstatic\/appScreenAds\/requestAds script-path = https://raw.githubusercontent.com/johnmillzer/tool/refs/heads/main/Scripts/qdmetro_remove_ads.js, requires-body = true, tag = 移除开屏广告
 
+# 首页净化
+http-response ^https:\/\/api\.qd-metro\.com\/ngstatic\/static\/fourthIndex script-path = https://raw.githubusercontent.com/johnmillzer/tool/refs/heads/main/Scripts/qdmetro_remove_ads.js, requires-body = true, tag = 精简首页
+
+
+
+
+
 [MitM]
 hostname = api.qd-metro.com
