@@ -1,7 +1,7 @@
 #!name = 航旅纵横去广告
 #!desc = 过滤航旅纵横广告
 #!openUrl = 
-#!author = 怎么肥事, linus zhang,jm
+#!author = 可莉, linus zhang,jm
 #!tag = 去广告
 #!system = 
 #!system_version = 
@@ -25,7 +25,7 @@ URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/
 
 [Script]
 # 首页 - 移除广告：今日推荐、推荐、全球购。。。
-http-response ^https:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native script-path = https://raw.githubusercontent.com/johnmillzer/tool/refs/heads/main/Scripts/Umetrip_remove_ads_plus_dition.js, requires-body = true, tag = 移除首页广告
+http-response ^https:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native$ requires-body=1,script-response-body response-body-replace-regex "adDesc" "null"
 
 
 [MitM]
