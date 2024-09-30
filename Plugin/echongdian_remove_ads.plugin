@@ -11,8 +11,8 @@
 #!date = 2024-09-26 10:20:152024-09-29 21:53:21
 
 [Rule]
-DOMAIN-SUFFIX, cdn-evone-oss.echargenet.com, REJECT
-DOMAIN, cdn-evone-ceph.echargenet.com REJECT
+# DOMAIN-SUFFIX, cdn-evone-oss.echargenet.com, REJECT
+# DOMAIN, cdn-evone-ceph.echargenet.com REJECT
 # DOMAIN-SUFFIX, cdn-evone-oss.echargenet.com, REJECT
 
 [Rewrite]
@@ -28,4 +28,4 @@ DOMAIN, cdn-evone-ceph.echargenet.com REJECT
 
 
 [MitM]
-hostname = cdn-evone.oss-cn-beijing.aliyuncs.com, cdn-evone-oss.echargenet.com
+hostname = cdn-evone-ceph.echargenet.com
