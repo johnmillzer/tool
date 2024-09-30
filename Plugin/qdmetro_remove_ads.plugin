@@ -1,1 +1,25 @@
+#!name = 青岛地铁去广告
+#!desc = 过滤青岛地铁开屏广告
+#!openUrl = 
+#!author = 
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(745)
+#!homepage = 
+#!icon = 
+#!date = 2024-09-30 18:11:34
 
+[Rule]
+
+
+[Rewrite]
+# 开屏广告去除方法一
+^https:\/\/api\.qd-metro\.com\/ngstatic\/appScreenAds\/requestAds reject-dict
+
+[Script]
+# 开屏广告去除方法二
+# http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除我的页面推广
+
+[MitM]
+hostname = api.qd-metro.com
