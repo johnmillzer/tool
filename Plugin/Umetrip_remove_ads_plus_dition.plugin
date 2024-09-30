@@ -24,10 +24,11 @@ URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/
 ^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject-200
 
 # 首页 - 移除广告：今日推荐、推荐、全球购。。。
-^https:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native$ response-body-replace-regex adDesc null 
+# ^https:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native$ response-body-replace-regex adDesc null 
 
 
 [Script]
+http-response ^https?:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native script-path = https://raw.githubusercontent.com/linuszlx/JS/refs/heads/main/Hanglvzongheng/Um.JS, tag = 移除首页广告
 
 
 [MitM]
