@@ -14,10 +14,11 @@
 
 [Script]
 #会员
-http-response ^https?:\/\/mobile-new\.chinaeew\.cn\/v\d\/order\/apple\/vip script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/dzyj.js, requires-body = true, tag = 会员
+#http-response ^https?:\/\/mobile-new\.chinaeew\.cn\/v\d\/order\/apple\/vip script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/dzyj.js, requires-body = true, tag = 会员
+http-response ^https?:\/\/mobile-new\.chinaeew\.cn\/v\d\/order\/apple\/vip script-path=https://raw.githubusercontent.com/johnmillzer/tool/refs/heads/main/Scripts/dzyj2.js, requires-body = true, tag = 会员
 
 #页面净化
-http-response ^https:\/\/mobile-new\.chinaeew\.cn\/v1\/appConfig\/fromDB script-path=https://raw.githubusercontent.com/johnmillzer/tool/refs/heads/main/Scripts/dzyj.js, requires-body = true, tag = 页面净化
+http-response ^https:\/\/mobile-new\.chinaeew\.cn\/v1\/appConfig\/fromDB script-path=https://raw.githubusercontent.com/johnmillzer/tool/refs/heads/main/Scripts/dzyj2.js, requires-body = true, tag = 页面净化
 
 [MitM]
 hostname = mobile-new.chinaeew.cn
