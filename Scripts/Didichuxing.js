@@ -26,9 +26,9 @@ if (url.includes("/other/pGetSceneList")) {
 }
 
 if (url.includes("/homepage/v1/core")) {
-  const keepNavIds = [];
+  const keepNavIds = ['dache_anycar', 'carmate', 'yuancheng', 'driverservice', 'bike', 'freight', 'zuche', 'pincheche', 'huochepiao', 'nav_more',  ];
   if (obj.data && obj.data.order_cards && obj.data.order_cards.nav_list_card && obj.data.order_cards.nav_list_card.data) {
-    obj.data.order_cards.nav_list_card.data = [];  // 直接设置为空数组，移除所有导航栏项目
+    obj.data.order_cards.nav_list_card.data = obj.data.order_cards.nav_list_card.data.filter(item => keepNavIds.includes(item.nav_id));
   }
   const keepBottomNavIds = ['v6x_home', 'home_page', 'user_center'];
   if (obj.data && obj.data.disorder_cards && obj.data.disorder_cards.bottom_nav_list && obj.data.disorder_cards.bottom_nav_list.data) {
