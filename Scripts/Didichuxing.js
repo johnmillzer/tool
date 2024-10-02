@@ -58,7 +58,7 @@ if (url.includes("/usercenter/me")) {
     obj.data.cards.forEach(card => {
       if (card.tag === "wallet") {
         if (card.items) {
-          card.items = card.items.filter(item => item.title === "优惠券" || item.title === "出行卡");
+          card.items = card.items.filter(item => item.title === "优惠券" || item.title === "出行卡" || item.title === "福利金");
         }
         if (card.card_type === 4 && card.bottom_items) {
           card.bottom_items = card.bottom_items.filter(item => 
