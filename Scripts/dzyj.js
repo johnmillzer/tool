@@ -8,30 +8,12 @@
 */
 
 
-let obj = JSON.parse($response.body);
-  obj = {
-    "message" : "查询成功",
-    "data" : {
-      "endTime" : 4092599349000
-    },
-    "code" : 0
-  };
-
-/*
 const url = $request.url;
 if (!$response.body) $done({});
 
 let obj = JSON.parse($response.body);
 if (url.includes("v1/appConfig/fromDB")) {
-  
-  obj = {
-    "message" : "查询成功",
-    "data" : {
-      "endTime" : 4092599349000
-    },
-    "code" : 0
-  };
-  
+
   if (obj && obj.data && obj.data.banner) {
     obj.data.banner = {};
   }
@@ -65,6 +47,5 @@ if (url.includes("v1/appConfig/fromDB")) {
   }
 
 }
-*/
 
 $done({ body: JSON.stringify(obj) });
