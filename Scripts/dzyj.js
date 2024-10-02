@@ -47,7 +47,7 @@ if (url.includes("v1/appConfig/fromDB")) {
   }
 
   if (obj && obj.data && obj.data.encourage && obj.data.encourage.isOn) {
-    obj.data.popupAd.encourage.isOn = "false";
+    obj.data.encourage.isOn = "false";
   }
   
 }
