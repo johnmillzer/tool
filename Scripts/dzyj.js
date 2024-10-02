@@ -11,7 +11,6 @@ const url = $request.url;
 if (!$response.body) $done({});
 
 let obj = JSON.parse($response.body);
-if (url.includes("v1/appConfig/fromDB")) {
   obj = {
     "message" : "查询成功",
     "data" : {
@@ -19,8 +18,6 @@ if (url.includes("v1/appConfig/fromDB")) {
     },
     "code" : 0
   };
-}
-
 
 /*
 let obj = JSON.parse($response.body);
