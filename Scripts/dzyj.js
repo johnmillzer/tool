@@ -12,6 +12,19 @@ if (!$response.body) $done({});
 
 let obj = JSON.parse($response.body);
 if (url.includes("v1/appConfig/fromDB")) {
+  obj = {
+    "message" : "查询成功",
+    "data" : {
+      "endTime" : 4092599349000
+    },
+    "code" : 0
+  };
+}
+
+
+/*
+let obj = JSON.parse($response.body);
+if (url.includes("v1/appConfig/fromDB")) {
   
   obj = {
     "message" : "查询成功",
@@ -54,5 +67,6 @@ if (url.includes("v1/appConfig/fromDB")) {
   }
 
 }
+*/
 
 $done({ body: JSON.stringify(obj) });
