@@ -26,7 +26,7 @@ if (url.includes("/other/pGetSceneList")) {
 }
 
 if (url.includes("/homepage/v1/core")) {
-  const keepNavIds = ['dache_anycar', 'driverservice', 'bike'];
+  const keepNavIds = ['dache_anycar', 'pincheche', 'driverservice', 'bike’, 'freight', 'nav_more'];
   if (obj.data && obj.data.order_cards && obj.data.order_cards.nav_list_card && obj.data.order_cards.nav_list_card.data) {
     obj.data.order_cards.nav_list_card.data = obj.data.order_cards.nav_list_card.data.filter(item => keepNavIds.includes(item.nav_id));
   }
@@ -58,7 +58,7 @@ if (url.includes("/usercenter/me")) {
     obj.data.cards.forEach(card => {
       if (card.tag === "wallet") {
         if (card.items) {
-          card.items = card.items.filter(item => item.title === "优惠券");
+          card.items = card.items.filter(item => item.title === "优惠券" || item.title === "出行卡" || item.title === "福利金");
         }
         if (card.card_type === 4 && card.bottom_items) {
           card.bottom_items = card.bottom_items.filter(item => 
