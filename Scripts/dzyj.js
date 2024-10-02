@@ -27,9 +27,23 @@ if (url.includes("v1/appConfig/fromDB")) {
   if (obj && obj.data && obj.data.banner) {
     obj.data.banner = {};
   }
+  
+  if (obj && obj.data && obj.data.startAd && obj.data.startAd.isOn) {
+    obj.data.startAd.isOn = "false";
+  }
+
+  if (obj && obj.data && obj.data.vipPopAd && obj.data.vipPopAd.isOn) {
+    obj.data.vipPopAd.isOn = "false";
+  }
+
+  if (obj && obj.data && obj.data.popupAd && obj.data.popupAd.isOn) {
+    obj.data.popupAd.isOn = "false";
+  }
+
   if (obj && obj.message) {
     obj.data.message = "查询成功";
     obj.data.endTime = 4092599349000;
+    obj.data.code = 0;
   }
 }
 
