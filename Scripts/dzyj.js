@@ -1,9 +1,11 @@
+/*
 项目名称：地震预警
 下载地址：https://t.cn/A6CoMiO5
 更新日期：2024-10-02
 脚本作者：chxm1023,jm
 电报频道：https://t.me/chxm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
+*/
 
 const url = $request.url;
 if (!$response.body) $done({});
