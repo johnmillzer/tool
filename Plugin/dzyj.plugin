@@ -1,1 +1,23 @@
+#!name = 地震预警
+#!desc = 地震预警会员/首页净化
+#!openUrl = 
+#!author = chxm1023
+#!tag = 会员, 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(745)
+#!homepage = 
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Amap.png
+#!date = 2024-10-02 20:59:47
 
+[Rule]
+
+
+[Rewrite]
+
+
+[Script]
+http-response ^https?:\/\/.*\.amap\.com\/ws\/faas\/amap-navigation\/main-page script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js, requires-body = true, tag = 会员+首页净化
+
+[MitM]
+hostname = mobile-new.chinaeew.cn
