@@ -1,5 +1,3 @@
-/*************************************
-
 项目名称：地震预警
 下载地址：https://t.cn/A6CoMiO5
 更新日期：2024-04-29
@@ -40,7 +38,7 @@ if (url.includes("v1/appConfig/fromDB")) {
     obj.data.popupAd.isOn = "false";
   }
 
-  if (obj && obj.message) {
+  if (obj && obj.data) {
     obj.data.message = "查询成功";
     obj.data.endTime = 4092599349000;
     obj.data.code = 0;
