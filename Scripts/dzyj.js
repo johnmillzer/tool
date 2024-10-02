@@ -40,7 +40,7 @@ if (url.includes("v1/appConfig/fromDB")) {
     obj.data.popupAd.isOn = "false";
   }
 
-  if (obj && obj.data) {
+  if (obj && obj.message && obj.data) {
     obj.message = "查询成功";
     obj.data.endTime = 4092599349000;
   }
@@ -48,8 +48,7 @@ if (url.includes("v1/appConfig/fromDB")) {
   if (obj && obj.data && obj.data.encourage && obj.data.encourage.isOn) {
     obj.data.encourage.isOn = "false";
   }
-  obj.code = 0;
-  
+  obj.code = 0;  
 }
 
 $done({ body: JSON.stringify(obj) });
