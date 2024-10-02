@@ -26,7 +26,7 @@ if (url.includes("/other/pGetSceneList")) {
 }
 
 if (url.includes("/homepage/v1/core")) {
-  const keepNavIds = [null];
+  const keepNavIds = ['dache_anycar', 'pincheche', 'driverservice', 'bike’, 'freight', 'nav_more'];
   if (obj.data && obj.data.order_cards && obj.data.order_cards.nav_list_card && obj.data.order_cards.nav_list_card.data) {
     obj.data.order_cards.nav_list_card.data = obj.data.order_cards.nav_list_card.data.filter(item => keepNavIds.includes(item.nav_id));
   }
