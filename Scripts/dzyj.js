@@ -7,18 +7,6 @@
 电报频道：https://t.me/chxm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
 
-/*
-**************************************
-
-[rewrite_local]
-^https?:\/\/mobile-new\.chinaeew\.cn\/v\d\/order\/apple\/vip url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/dzyj.js
-
-[mitm]
-hostname = mobile-new.chinaeew.cn
-
-************************************
-*/
-
 const url = $request.url;
 if (!$response.body) $done({});
 
@@ -27,7 +15,19 @@ if (url.includes("v1/appConfig/fromDB")) {
   if (obj && obj.data && obj.data.banner) {
     obj.data.banner = {};
   }
-  
+
+  if (obj && obj.data && obj.data.reward && obj.data.reward.isOn) {
+    obj.data.reward.isOn = "false";
+  }
+
+  if (obj && obj.data && obj.data.vipAd && obj.data.vipAd.isOn) {
+    obj.data.vipAd.isOn = "false";
+  }
+
+  if (obj && obj.data && obj.data.newsBanner && obj.data.newsBanner.isOn) {
+    obj.data.newsBanner.isOn = "false";
+  }
+
   if (obj && obj.data && obj.data.startAd && obj.data.startAd.isOn) {
     obj.data.startAd.isOn = "false";
   }
@@ -51,17 +51,5 @@ if (url.includes("v1/appConfig/fromDB")) {
   }
   
 }
-
-/*
-var chxm1023 = JSON.parse($response.body);
-
-chxm1023 = {
-  "message" : "查询成功",
-  "data" : {
-    "endTime" : 4092599349000
-  },
-  "code" : 0
-};
-*/
 
 $done({ body: JSON.stringify(obj) });
