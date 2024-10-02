@@ -12,8 +12,8 @@ const url = $request.url;
 if (!$response.body) $done({});
 
 let obj = JSON.parse($response.body);
-if (url.includes("v1/appConfig/fromDB")) {
 
+if (url.includes("order/apple/vip")) {
   obj = {
     "message" : "查询成功",
     "data" : {
@@ -21,7 +21,9 @@ if (url.includes("v1/appConfig/fromDB")) {
     },
     "code" : 0
   } 
+}
 
+if (url.includes("v1/appConfig/fromDB")) {
   if (obj && obj.data && obj.data.banner) {
     obj.data.banner = {};
   }
