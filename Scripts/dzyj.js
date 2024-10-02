@@ -41,7 +41,7 @@ if (url.includes("v1/appConfig/fromDB")) {
   }
 
   if (obj && obj.data) {
-    obj.data.message = "查询成功";
+    obj.message = "查询成功";
     obj.data.endTime = 4092599349000;
     obj.data.code = 0;
   }
