@@ -1,7 +1,7 @@
 #!name = 地震预警
-#!desc = 地震预警会员/首页净化
-#!openUrl = 
-#!author = chxm1023
+#!desc = 地震预警会员/页面净化
+#!openUrl = https://apps.apple.com/app/id713947342
+#!author = chxm1023,jm
 #!tag = 会员, 去广告
 #!system = 
 #!system_version = 
@@ -10,14 +10,8 @@
 #!icon = https://raw.githubusercontent.com/johnmillzer/Icon/main/dzyj.png
 #!date = 2024-10-02 20:59:47
 
-[Rule]
-
-
-[Rewrite]
-
-
 [Script]
-http-response ^https:\/\/mobile-new\.chinaeew\.cn\/v1\/appConfig\/fromDB script-path=https://raw.githubusercontent.com/johnmillzer/tool/refs/heads/main/Scripts/dzyj.js, requires-body = true, tag = 会员+首页净化
+http-response ^https:\/\/mobile-new\.chinaeew\.cn\/v1\/appConfig\/fromDB script-path=https://raw.githubusercontent.com/johnmillzer/tool/refs/heads/main/Scripts/dzyj.js, requires-body = true, tag = 会员+页面净化
 
 [MitM]
 hostname = mobile-new.chinaeew.cn
