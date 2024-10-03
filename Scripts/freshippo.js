@@ -17,8 +17,8 @@ if (url.indexOf("queryindexpage")!=-1) {
   }
 }
 
-
-
+  
+/*
 // 首页
 if(url.indexOf("queryindexpage")!=-1){
   const sceneTemplateId = [
@@ -62,4 +62,7 @@ if(url.indexOf("queryindexpage")!=-1){
 }else{
   $done({});
 }
+
+*/
+
 $done({body:JSON.stringify(obj)});
