@@ -12,9 +12,13 @@ let obj=JSON.parse($response.body);
 
 //去开屏
 if (url.indexOf("queryindexpage")!=-1) {
-  if (obj && obj.data) {
-    obj.data.scenes = [];
-  }
+  if (obj && obj.data && Array.isArray(obj.data.scenes)) {
+    obj.data.scenes.forEach(scene => {
+        if (scene.emptyScene === "false") {
+            scene.emptyScene = "true";
+        }
+    });
+}
 }
 
   
