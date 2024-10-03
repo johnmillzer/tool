@@ -12,7 +12,7 @@
 
 [Rule]
 # 移除广告下发请求
-AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, AMapiPhone*)), REJECT
+# AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, AMapiPhone*)), REJECT
 
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
 DOMAIN, free-aos-cdn-image.amap.com, REJECT
@@ -46,15 +46,15 @@ DOMAIN-SUFFIX, v.smtcdns.com, REJECT
 [Script]
 # 墨鱼的内容
 #首页
-#http-response ^https?:\/\/.*\.amap\.com\/ws\/faas\/amap-navigation\/main-page requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+http-response ^https?:\/\/.*\.amap\.com\/ws\/faas\/amap-navigation\/main-page requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js tag = 首页
 #开屏
-http-response ^https?:\/\/.*\.amap\.com\/ws\/valueadded\/alimama\/splash_screen requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+http-response ^https?:\/\/.*\.amap\.com\/ws\/valueadded\/alimama\/splash_screen requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js tag = 开屏
 #消息
-http-response ^https?:\/\/.*\.amap\.com\/ws\/msgbox\/pull requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+http-response ^https?:\/\/.*\.amap\.com\/ws\/msgbox\/pull requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js tag = 消息
 #我的
-http-response ^https?:\/\/.*\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+http-response ^https?:\/\/.*\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js tag = 我的
 #搜索
-http-response ^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/new_hotword requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+http-response ^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/new_hotword requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js tag = 搜索
 
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
 # http-response ^https:\/\/m5\.amap\.com\/ws\/aos\/perception\/publicTravel\/beforeNavi\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除导航详情页推广
