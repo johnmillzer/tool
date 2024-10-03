@@ -13,7 +13,7 @@ let obj=JSON.parse($response.body);
 //去开屏
 if (url.indexOf("queryindexpage")!=-1) {
   if (obj && obj.data) {
-    obj.data = {};
+    obj.data.scenes = [];
   }
 }
 
