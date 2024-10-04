@@ -1,0 +1,23 @@
+#!name = 国家医保服务平台
+#!desc = 国家医保服务平台去开屏
+#!openUrl = 
+#!author = fmz200
+#!tag = 去开屏广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(745)
+#!homepage = 
+#!icon = https://raw.githubusercontent.com/johnmillzer/Icon/main/nhsa.png
+#!date = 2024-10-04 21:44:54
+
+[Rule]
+
+
+[Rewrite]
+# 开屏广告
+^https?:\/\/fuwu\.nhsa\.gov\.cn\/ebus\/fuwu\/api\/base\/cms\/iep\/web\/cms\/hmpgcfg\/queryAppHmpgCfgByApp url reject
+
+[Script]
+
+[MitM]
+hostname = fuwu.nhsa.gov.cn
