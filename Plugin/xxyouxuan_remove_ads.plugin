@@ -1,7 +1,7 @@
 #!name = 晓晓优选去广告
 #!desc = 过滤晓晓优选开屏广告和首页广告
 #!openUrl = 
-#!author = walalala
+#!author = walalala，别怕我不乱来，其他
 #!tag = 去广告
 #!system = 
 #!system_version = 
@@ -19,6 +19,7 @@ DOMAIN-SUFFIX, sdk.e.qq.com, REJECT
 DOMAIN-SUFFIX, tnc3-alisc1.zijieapi.com, REJECT
 DOMAIN-SUFFIX, lf-cdn-tos.bytescm.com, REJECT
 DOMAIN-SUFFIX, toblog.ctobsnssdk.com, REJECT
+DOMAIN-SUFFIX, beizi.biz, REJECT
 
 [Rewrite]
 ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/ reject-dict
