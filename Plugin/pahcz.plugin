@@ -1,0 +1,27 @@
+#!name = 平安好车主去广告
+#!desc = 平安好车主去广告
+#!openUrl = 
+#!author = 
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(745)
+#!homepage = 
+#!icon = https://raw.githubusercontent.com/johnmillzer/Icon/main/pzhcz.png
+#!date = 2024-10-05
+
+[Rule]
+# 移除广告下发请求，但关系到房源等信息，开启后无法查看
+AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, AMapiPhone*)), REJECT
+DOMAIN, amap-aos-info-nogw.amap.com, REJECT
+
+[Rewrite]
+# 去广告
+^https?:\/\/iobs\.pingan\.com\.cn\/download\/bweb-per-sf-prd\/bweb url reject-200
+^https?:\/\/iobs\.pingan\.com\.cn\/download\/icore-aops-base-dmz-prd\/(YourSystemName|icore-apps-ad) url reject-200
+^https?:\/\/hcz-member\.pingan\.com\.cn\/micro-api\/homepage\/do\/app\/popbox\/getTopPopBox url reject
+
+[Script]
+
+[MitM]
+hostname = iobs.pingan.com.cn, hcz-member.pingan.com.cn
