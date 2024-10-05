@@ -23,11 +23,11 @@ DOMAIN-SUFFIX, toblog.ctobsnssdk.com, REJECT
 [Rewrite]
 ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/ reject-dict
 ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/banner\? reject-dict
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/bottom_banner\? reject-dict
 
 
 [Script]
-# 首页去广告
-http-response ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra_ad\? script-path = https://raw.githubusercontent.com/johnmillzer/tool/refs/heads/main/Scripts/xxyouxuan_remove_ads.js, requires-body = true, tag = 移除首页广告
+
 
 [MitM]
 hostname = xxyx-client-api.xiaoxiaoyouxuan.com, 
