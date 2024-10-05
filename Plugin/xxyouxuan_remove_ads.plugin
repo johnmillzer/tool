@@ -1,0 +1,33 @@
+#!name = 晓晓优选去广告
+#!desc = 过滤晓晓优选开屏广告和首页广告
+#!openUrl = 
+#!author = walalala
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(745)
+#!homepage = 
+#!icon = 
+#!date = 2024-10-05 15:51:21
+
+[Rule]
+# 移除开屏广告
+DOMAIN-SUFFIX, api-access.pangolin-sdk-toutiao*.com, REJECT
+DOMAIN-SUFFIX, volces.com, REJECT
+DOMAIN-SUFFIX, gdt.qq.com, REJECT
+DOMAIN-SUFFIX, sdk.e.qq.com, REJECT
+DOMAIN-SUFFIX, tnc3-alisc1.zijieapi.com, REJECT
+DOMAIN-SUFFIX, lf-cdn-tos.bytescm.com, REJECT
+DOMAIN-SUFFIX, toblog.ctobsnssdk.com, REJECT
+
+[Rewrite]
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/ reject-dict
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/banner\? reject-dict
+
+
+[Script]
+# 首页去广告
+http-response ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra_ad\? script-path = https://raw.githubusercontent.com/johnmillzer/tool/refs/heads/main/Scripts/xxyouxuan_remove_ads.js, requires-body = true, tag = 移除首页广告
+
+[MitM]
+hostname = xxyx-client-api.xiaoxiaoyouxuan.com, 
