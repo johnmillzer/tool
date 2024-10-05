@@ -22,7 +22,7 @@ DOMAIN-SUFFIX, toblog.ctobsnssdk.com, REJECT
 
 [Rewrite]
 ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/ reject-dict
-^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/banner\? reject-dict
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra_ad\? reject-dict
 ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/bottom_banner\? reject-dict
 
 
