@@ -1,0 +1,22 @@
+#!name = 永辉生活去广告
+#!desc = 过滤生活开屏广告
+#!openUrl = 
+#!author = 
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(745)
+#!homepage = 
+#!icon = 
+#!date = 2024-10-06 22:35:33
+
+[Rule]
+
+[Rewrite]
+^https?:\/\/api\.yonghuivip\.com\/web\/shensuan\/ad\/getAd url reject-200
+
+[Script]
+
+
+[MitM]
+hostname = api.yonghuivip.com
