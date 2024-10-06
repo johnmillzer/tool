@@ -1,7 +1,7 @@
 #!name = 晓晓优选去广告
 #!desc = 过滤晓晓优选开屏广告和首页广告
 #!openUrl = 
-#!author = walalala，别怕我不乱来，其他
+#!author = RuCu6[https://github.com/RuCu6],JM[https://github.com/johnmillzer]
 #!tag = 去广告
 #!system = 
 #!system_version = 
@@ -12,7 +12,8 @@
 
 [Rule]
 # 移除开屏广告
-DOMAIN-SUFFIX, api-access.pangolin-sdk-toutiao*.com, REJECT
+DOMAIN-SUFFIX, api-access.pangolin-sdk-toutiao.com, REJECT
+DOMAIN-SUFFIX, api-access.pangolin-sdk-toutiao1.com, REJECT
 DOMAIN-SUFFIX, volces.com, REJECT
 DOMAIN-SUFFIX, gdt.qq.com, REJECT
 DOMAIN-SUFFIX, sdk.e.qq.com, REJECT
@@ -31,4 +32,4 @@ DOMAIN-SUFFIX, beizi.biz, REJECT
 
 
 [MitM]
-hostname = xxyx-client-api.xiaoxiaoyouxuan.com, 
+hostname = xxyx-client-api.xiaoxiaoyouxuan.com
