@@ -1,0 +1,20 @@
+#!name = 掌上英雄联盟去广告
+#!desc = 掌上英雄联盟去广告
+#!openUrl = 
+#!author = jm
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(745)
+#!homepage = 
+#!icon = 
+#!date = 2024-10-11 00:46
+
+[Rule]
+# 
+[Rewrite]
+^https:\/\/us\.l\.qq\.com\/exapp\? reject
+^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/floatbox reject
+# 
+[MitM]
+hostname = us.l.qq.com, mlol.qt.qq.com
