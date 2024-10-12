@@ -13,8 +13,8 @@
 [Rule]
 # 
 [Rewrite]
-^https:\/\/us\.l\.qq\.com\/exapp\? reject
-^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/floatbox reject
+^https:\/\/us\.l\.qq\.com\/exapp\? reject-dict
+^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/floatbox reject-dict
 # 
 [MitM]
 hostname = us.l.qq.com, mlol.qt.qq.com
