@@ -1,16 +1,17 @@
 #!name = 饿了么去广告
 #!desc = 过滤饿了么开屏广告
 #!openUrl = 
-#!author = fmz200
+#!author = fmz200, JM for respect of Walalala
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.1(745)
 #!homepage = 
 #!icon = https://raw.githubusercontent.com/johnmillzer/Icon/main/elm.png
-#!date = 2024-09-15 20:19:15
+#!date = 2024-10-19 19:56:07
 
 [Rule]
+AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, eleme*)), REJECT
 
 
 [Rewrite]
