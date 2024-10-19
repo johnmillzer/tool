@@ -23,7 +23,7 @@
 # 美团订单详情页更多推荐
 ^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends reject-dict
 #首页右下角广告
-^https:\/\/p0\.meituan\.net\/linglong\/\b\w{40}\b\.gif reject-dict
+^https:\/\/p0\.meituan\.net\/linglong\/\w{40}\.gif reject-dict
 
 [Script]
 
