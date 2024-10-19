@@ -28,6 +28,9 @@ URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/
 #^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject
 #^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject-200
 
+# 首页 - 移除右下角广告图片
+^http:\/\/oss\.umetrip\.com\/fs\/membership\/static\/w{21} reject
+
 
 [Script]
 # 首页 - 移除广告：今日推荐、推荐、全球购。。。
