@@ -1,5 +1,5 @@
 #!name = 美团去广告
-#!desc = 美团 & 美团外卖去广告
+#!desc = 美团去广告
 #!openUrl = 
 #!author = fmz200
 #!tag = 去广告
@@ -23,7 +23,7 @@
 # 美团订单详情页更多推荐
 ^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends reject-dict
 #首页右下角广告
-^https:\/\/p0\.meituan\.net\/linglong\/\b\w{40}\b\.gif reject
+^https:\/\/p0\.meituan\.net\/linglong\/\b\w{40}\b\.gif reject-dict
 
 [Script]
 
