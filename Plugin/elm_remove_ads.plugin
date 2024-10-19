@@ -29,9 +29,11 @@ AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-A
 
 #首页右下角广告
 ^https:\/\/nr-op\.elemecdn\.com\/image\/mussel-\d+\.(png|gif)\?x-oss-process=image\/resize\,m_fill,w_1\d{2},h_1\d{2}\/ reject
+#可能是×
+^https:\/\/gw\.alicdn\.com\/imgextra\/i2\/O1CN01sjgtjk1OzSKeHxiMi_!!6000000001776-2-tps-72-72\.png_90x90q90\.jpg_\.webp reject
 
 
 [Script]
 
 [MitM]
-hostname = elemecdn.com,fuss10.elemecdn.com,cube.elemecdn.com,www1.elecfans.com,nr-op.elemecdn.com
+hostname = elemecdn.com,fuss10.elemecdn.com,cube.elemecdn.com,www1.elecfans.com,nr-op.elemecdn.com,gw.alicdn.com
