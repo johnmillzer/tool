@@ -30,4 +30,4 @@
 [Script]
 
 [MitM]
-hostname = img.meituan.net,s3plus.meituan.net,flowplus.meituan.net,p0.meituan.net
+hostname = img.meituan.net,s3plus.meituan.net,flowplus.meituan.net,p0.meituan.net,p1.meituan.net
