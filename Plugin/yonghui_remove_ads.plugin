@@ -1,0 +1,26 @@
+#!name = 永辉生活去广告
+#!desc = 去开屏和首页去右下角广告
+#!openUrl = 
+#!author = 奶思，jm for respect of Walalala
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(745)
+#!homepage = 
+#!icon = https://raw.githubusercontent.com/johnmillzer/Icon/main/yonghui.png
+#!date = 2024-10-20 21:43:52
+
+[Rule]
+
+[Rewrite]
+# 去开屏广告
+^https?:\/\/api\.yonghuivip\.com\/web\/shensuan\/ad\/getAd url reject-200
+
+# 去首页右下角的广告
+^https:\/\/api\.yonghuivip\.com\/web\/user\/coupon\/v4\/one_click\/760\?\.* reject
+
+[Script]
+
+
+[MitM]
+hostname = api.yonghuivip.com
