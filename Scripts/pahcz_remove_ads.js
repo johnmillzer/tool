@@ -12,6 +12,7 @@ if (url.includes("maam/plugin/getPluginListV4.do")) {
   }
   if (obj && obj.data) {
     obj.data[0].bgImgUrl = ""
+    obj.data[1].bgImgUrl = ""
   }
 }
 
