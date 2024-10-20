@@ -22,7 +22,7 @@
 ^https:\/\/api-hcz-applets\.pingan\.com\.cn\/micro-api\/mina-store\/pub\/global\/config reject-dict
 
 # 去首页下方的广告
-^https:\/\/maam\.pingan\.com\.cn\/maam\/plugin\/getPluginListV4\.do\?deviceId=h027fc7fc9098a8e0a6164765f351117e&deviceType=ios_iPhone14,7&osVersion=17\.1\.2&sdkVersion=6\.1\.2\.0515&appId=PA00300000000_01_HCZ&appVersion=5\.47\.1&recommendAuth=1 response-body-json-del data
+^https:\/\/maam\.pingan\.com\.cn\/maam\/plugin\/getPluginListV4\.do\?deviceId=\.* response-body-json-del data
 
 
 [Script]
