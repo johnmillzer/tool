@@ -8,8 +8,7 @@ let obj = JSON.parse($response.body);
 
 if (url.includes("download/bpgbd-sys-sf-prd/")) {
   if (obj && obj.data) {
-    obj.data[0].needLogin = "Y";
-
+    obj.data = []
   }
 }
 
