@@ -6,10 +6,31 @@ if (!$response.body) $done({});
 
 let obj = JSON.parse($response.body);
 
-if (url.includes("download/bpgbd-sys-sf-prd/")) {
+if (url.includes("maam/plugin/getPluginListV4.do")) {
+  if (obj && obj.baseInfo) {
+    obj.baseInfo.baseShowTime = "23:59:59"
+  }
   if (obj && obj.data) {
-    obj.data = []
+    obj.data[0].bgImgUrl = ""
   }
 }
 
 $done({ body: JSON.stringify(obj) });
+
+
+/*
+const url = $request.url;
+if (!$response.body) $done({});
+
+let obj = JSON.parse($response.body);
+
+if (url.includes("maam/plugin/getPluginListV4.do")) {
+  if (obj && obj.data) {
+    obj.data[0]. = ""
+  }
+}
+
+$done({ body: JSON.stringify(obj) });
+
+
+*/
