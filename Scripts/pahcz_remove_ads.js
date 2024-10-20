@@ -8,7 +8,8 @@ let obj = JSON.parse($response.body);
 
 if (url.includes("download/bpgbd-sys-sf-prd/")) {
   if (obj && obj.data) {
-    obj.data.fingernailBgColor = "0,0,0";
+    obj.data.needLogin = "Y";
+
   }
 }
 
