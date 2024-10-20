@@ -8,7 +8,7 @@ let obj = JSON.parse($response.body);
 
 if (url.includes("maam/plugin/getPluginListV4.do")) {
   if (obj && obj.baseInfo) {
-    obj.baseInfo.baseShowTime = "3818332800"
+    obj.baseInfo.baseShowTime = 3818332800
   }
   if (obj && obj.data) {
     obj.data[0].bgImgUrl = ""
