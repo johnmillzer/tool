@@ -22,7 +22,7 @@
 #^http:\/\/iobs\.pingan\.com\.cn\/download\/icore-aops-base-dmz-prd\/PersonalCenterHomepageOBM-\d{13}-[a-zA-Z0-9]{32}-\d{8}$ reject
 
 # 去首页下方的广告
-^https:\/\/maam\.pingan\.com\.cn\/maam\/plugin\/getPluginListV4\.do\?deviceId=\.* response-body-json-replace data.initShowtime "0"
+http-response ^https:\/\/maam\.pingan\.com\.cn\/maam\/plugin\/getPluginListV4\.do\?deviceId=\.* script-path = https://raw.githubusercontent.com/johnmillzer/tool/refs/heads/main/Scripts/pahcz_remove_ads.js, requires-body = true, tag = 精简首页底部
 
 
 [Script]
