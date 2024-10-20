@@ -19,10 +19,10 @@
 ^https?:\/\/hcz-member\.pingan\.com\.cn\/micro-api\/homepage\/do\/app\/popbox\/getTopPopBox reject
 
 # 去首页banner的广告
-^http:\/\/iobs\.pingan\.com\.cn\/download\/icore-aops-base-dmz-prd\/PersonalCenterHomepageOBM-\d{13}-[a-zA-Z0-9]{32}-\d{8}$ reject
+#^http:\/\/iobs\.pingan\.com\.cn\/download\/icore-aops-base-dmz-prd\/PersonalCenterHomepageOBM-\d{13}-[a-zA-Z0-9]{32}-\d{8}$ reject
 
 # 去首页下方的广告
-^https:\/\/maam\.pingan\.com\.cn\/maam\/plugin\/getPluginListV4\.do\?deviceId=\.* response-body-json-del data
+^https:\/\/maam\.pingan\.com\.cn\/maam\/plugin\/getPluginListV4\.do\?deviceId=\.* response-body-json-replace data.initShowtime "0"
 
 
 [Script]
