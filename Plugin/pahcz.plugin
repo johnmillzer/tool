@@ -19,7 +19,7 @@
 ^https?:\/\/hcz-member\.pingan\.com\.cn\/micro-api\/homepage\/do\/app\/popbox\/getTopPopBox reject
 
 # 去首页banner的广告
-^https:\/\/api-hcz-applets\.pingan\.com\.cn\/micro-api\/mina-store\/pub\/global\/config reject-dict
+^http:\/\/iobs\.pingan\.com\.cn\/download\/icore-aops-base-dmz-prd\/PersonalCenterHomepageOBM-\d{13}-[a-zA-Z0-9]{32}-\d{8}$ reject
 
 # 去首页下方的广告
 ^https:\/\/maam\.pingan\.com\.cn\/maam\/plugin\/getPluginListV4\.do\?deviceId=\.* response-body-json-del data
