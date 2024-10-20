@@ -1,5 +1,5 @@
 #!name = 平安好车主去广告
-#!desc = 平安好车主去广告
+#!desc = 平安好车主去开屏，首页去广告
 #!openUrl = 
 #!author = 
 #!tag = 去广告
@@ -13,12 +13,19 @@
 [Rule]
 
 [Rewrite]
-# 去广告
+# 去开屏广告
 ^https?:\/\/iobs\.pingan\.com\.cn\/download\/bweb-per-sf-prd\/bweb reject-200
 ^https?:\/\/iobs\.pingan\.com\.cn\/download\/icore-aops-base-dmz-prd\/(YourSystemName|icore-apps-ad) reject-200
 ^https?:\/\/hcz-member\.pingan\.com\.cn\/micro-api\/homepage\/do\/app\/popbox\/getTopPopBox reject
 
+# 去首页banner的广告
+
+
+# 去首页下方的广告
+^https:\/\/maam\.pingan\.com\.cn\/maam\/plugin\/getPluginListV4\.do\?deviceId=h027fc7fc9098a8e0a6164765f351117e&deviceType=ios_iPhone14,7&osVersion=17\.1\.2&sdkVersion=6\.1\.2\.0515&appId=PA00300000000_01_HCZ&appVersion=5\.47\.1&recommendAuth=1 response-body-json-replace baseInfo.baseShowTime {"0"}
+
+
 [Script]
 
 [MitM]
-hostname = iobs.pingan.com.cn, hcz-member.pingan.com.cn
+hostname = iobs.pingan.com.cn, hcz-member.pingan.com.cn, maam.pingan.com.cn
