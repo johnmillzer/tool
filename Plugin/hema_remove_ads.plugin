@@ -22,8 +22,10 @@ AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-A
 #^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.querytabfeedstream reject-200
 ^https:\/\/acs-m\.freshippo\.com\/gw\/mtop\.wdk\.render\.querysinglepage\/ reject-dict
 
+# 右下角广告图片
+^https:\/\/gw\.alicdn\.com\/i4\/.+?-hemafrontend\.gif\? reject
+
 [Script]
 
-
 [MitM]
-hostname = acs.m.taobao.com, acs-m.freshippo.com
+hostname = acs.m.taobao.com, acs-m.freshippo.com, gw.alicdn.com
